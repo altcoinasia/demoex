@@ -1,0 +1,1990 @@
+<!doctype html>
+<html>
+<head>
+<title>Barter Trade</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" media="screen" href="css/jquery.classyscroll.css" />
+<link href="css/font-awesome.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+</head>
+<body>
+<header>
+  <div class="navigation_section">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid"> 
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+         <div class="notification_box desktop_hide"><img src="images/notification.svg" alt="" /><span class="notification_count">3</span></div>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+          <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo" /></a> </div>
+        
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav ">
+            <li><a href="#"><span class="exchange_icon"></span> Exchange</a></li>
+            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="bal_icon"></span>Balances <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="order_icon"></span> Orders <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="notification_box mobile_hide"><img src="images/notification.svg" alt="" /><span class="notification_count">3</span></div>
+          <ul class="nav navbar-nav navbar-right user_box">
+            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <div class="user_img"><img src="images/user.svg" alt="" /></div>
+              <span>John</span><span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse --> 
+        
+      </div>
+      <!-- /.container-fluid --> 
+      
+    </nav>
+  </div>
+</header>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-8 col-xs-12">
+        <h1 class="main_title">ETHEREUM <small>ETH/BTC</small></h1>
+        <div class="graph_section"><img class="img-responsive" src="images/graph_img.jpg" alt="" /></div>
+        <div class="form_style_box">
+          <div class="tab_diffrent_style">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#limit" data-toggle="tab">Limit</a></li>
+              <li><a href="#stop_limit" data-toggle="tab">STOP-LIMIT</a></li>
+            </ul>
+            <div class="tab-content">
+              <div id="limit" class="tab-pane fade in active">
+                <div class="row">
+                  <div class="col-md-6">
+                    <form>
+                      <div class="frm_title_style">
+                        <h3>Buy BNB</h3>
+                        <span>BTC Balance</span></div>
+                      <div class="row">
+                        <div class="form-group">
+                          <label class="col-md-3">Price</label>
+                          <div class="col-md-9">
+                            <div class="spinner qty_field">
+                              <input type="text" class="form-control" value="0">
+                              <button class="btn btn-default btn_plus" type="button"><i class="fa  fa-chevron-up"></i></button>
+                              <button class="btn btn-default btn_minus" type="button"><i class="fa  fa-chevron-down"></i></button>
+                              <span class="btc_text">BTC</span> </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-md-3">Amount</label>
+                          <div class="col-md-9">
+                            <div class="amnt_field">
+                              <input type="text" class="form-control" />
+                              <span class="btc_text">BTC</span></div>
+                          </div>
+                        </div>
+                        <div class="form-group checklist">
+                          <label class="col-md-3">&nbsp;</label>
+                          <div class="col-md-9">
+                            <ul>
+                              <li><a href="#">25%</a></li>
+                              <li><a href="#">50%</a></li>
+                              <li><a href="#">75%</a></li>
+                              <li><a href="#">100%</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-md-3">Total</label>
+                          <div class="col-md-9">
+                            <div class="ttl_field ">
+                              <input type="text" value="0.00000000" class="form-control" />
+                              <span class="btc_text">BTC</span></div>
+                          </div>
+                        </div>
+                        <div class="col-md-9 pull-right">
+                          <input class="btn btn_green large_btn" type="submit" value="Buy BNB" />
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-md-6">
+                    <form>
+                      <div class="frm_title_style">
+                        <h3>sell BNB</h3>
+                        <span>BTC Balance</span></div>
+                      <div class="row">
+                        <div class="form-group">
+                          <label class="col-md-3">Price</label>
+                          <div class="col-md-9">
+                            <div class="spinner qty_field">
+                              <input type="text" class="form-control" value="0">
+                              <button class="btn btn-default btn_plus" type="button"><i class="fa  fa-chevron-up"></i></button>
+                              <button class="btn btn-default btn_minus" type="button"><i class="fa  fa-chevron-down"></i></button>
+                              <span class="btc_text">BTC</span> </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-md-3">Amount</label>
+                          <div class="col-md-9">
+                            <div class="amnt_field">
+                              <input type="text" class="form-control" />
+                              <span class="btc_text">BTC</span></div>
+                          </div>
+                        </div>
+                        <div class="form-group checklist">
+                          <label class="col-md-3">&nbsp;</label>
+                          <div class="col-md-9">
+                            <ul>
+                              <li><a href="#">25%</a></li>
+                              <li><a href="#">50%</a></li>
+                              <li><a href="#">75%</a></li>
+                              <li><a href="#">100%</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-md-3">Total</label>
+                          <div class="col-md-9">
+                            <div class="ttl_field ">
+                              <input type="text" value="0.00000000" class="form-control" />
+                              <span class="btc_text">BTC</span></div>
+                          </div>
+                        </div>
+                        <div class="col-md-9 pull-right">
+                          <input class="btn btn_red large_btn" type="submit" value="Buy BNB" />
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div id="stop_limit" class="tab-pane fade">
+                <div class="row">
+                  <div class="col-md-6">
+                    <form>
+                      <div class="frm_title_style">
+                        <h3>Buy BNB</h3>
+                        <span>BTC Balance</span></div>
+                      <div class="row">
+                        <div class="form-group">
+                          <label class="col-md-3">Price</label>
+                          <div class="col-md-9">
+                            <div class="spinner qty_field">
+                              <input type="text" class="form-control" value="0">
+                              <button class="btn btn-default btn_plus" type="button"><i class="fa  fa-chevron-up"></i></button>
+                              <button class="btn btn-default btn_minus" type="button"><i class="fa  fa-chevron-down"></i></button>
+                              <span class="btc_text">BTC</span> </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-md-3">Amount</label>
+                          <div class="col-md-9">
+                            <div class="amnt_field">
+                              <input type="text" class="form-control" />
+                              <span class="btc_text">BTC</span></div>
+                          </div>
+                        </div>
+                        <div class="form-group checklist">
+                          <label class="col-md-3">&nbsp;</label>
+                          <div class="col-md-9">
+                            <ul>
+                              <li><a href="#">25%</a></li>
+                              <li><a href="#">50%</a></li>
+                              <li><a href="#">75%</a></li>
+                              <li><a href="#">100%</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-md-3">Total</label>
+                          <div class="col-md-9">
+                            <div class="ttl_field ">
+                              <input type="text" value="0.00000000" class="form-control" />
+                              <span class="btc_text">BTC</span></div>
+                          </div>
+                        </div>
+                        <div class="col-md-9 pull-right">
+                          <input class="btn btn_green large_btn" type="submit" value="Buy BNB" />
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-md-6">
+                    <form>
+                      <div class="frm_title_style">
+                        <h3>sell BNB</h3>
+                        <span>BTC Balance</span></div>
+                      <div class="row">
+                        <div class="form-group">
+                          <label class="col-md-3">Price</label>
+                          <div class="col-md-9">
+                            <div class="spinner qty_field">
+                              <input type="text" class="form-control" value="0">
+                              <button class="btn btn-default btn_plus" type="button"><i class="fa  fa-chevron-up"></i></button>
+                              <button class="btn btn-default btn_minus" type="button"><i class="fa  fa-chevron-down"></i></button>
+                              <span class="btc_text">BTC</span> </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-md-3">Amount</label>
+                          <div class="col-md-9">
+                            <div class="amnt_field">
+                              <input type="text" class="form-control" />
+                              <span class="btc_text">BTC</span></div>
+                          </div>
+                        </div>
+                        <div class="form-group checklist">
+                          <label class="col-md-3">&nbsp;</label>
+                          <div class="col-md-9">
+                            <ul>
+                              <li><a href="#">25%</a></li>
+                              <li><a href="#">50%</a></li>
+                              <li><a href="#">75%</a></li>
+                              <li><a href="#">100%</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-md-3">Total</label>
+                          <div class="col-md-9">
+                            <div class="ttl_field ">
+                              <input type="text" value="0.00000000" class="form-control" />
+                              <span class="btc_text">BTC</span></div>
+                          </div>
+                        </div>
+                        <div class="col-md-9 pull-right">
+                          <input class="btn btn_red large_btn" type="submit" value="Buy BNB" />
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="order_box_style tab_diffrent_style">
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#active_order" data-toggle="tab">ACTIVE ORDERS</a></li>
+            <li><a href="#dealt_order" data-toggle="tab">DEALT ORDERS</a></li>
+          </ul>
+          <div class="tab-content">
+            <div id="active_order" class="tab-pane fade in active">
+              <div class="table-responsive">
+                <table width="100%" class="table table-striped table-bordered tr_hover" border="0" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th><span>Time</span> <span class="tbl_shoting"></span></th>
+                      <th><select class="form-control small_field">
+                          <option>Buy / Sell</option>
+                          <option>Buy / Sell</option>
+                          <option>Buy / Sell</option>
+                        </select></th>
+                      <th>Price BTC</th>
+                      <th>Amount KCS</th>
+                      <th>Dealt KCS</th>
+                      <th>Operation</th>
+                      <th class="text-center">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td>0.00007809</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                       <td class="text-center"><a class="text-red" href="#"><i class="fa fa-close"></i></a></td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td>0.00007809</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                       <td class="text-center"><a class="text-red" href="#"><i class="fa fa-close"></i></a></td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td>0.00007809</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                       <td class="text-center"><a class="text-red" href="#"><i class="fa fa-close"></i></a></td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td>0.00007809</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                      <td class="text-center"><a class="text-red" href="#"><i class="fa fa-close"></i></a></td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td>0.00007809</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                      <td class="text-center"><a class="text-red" href="#"><i class="fa fa-close"></i></a></td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td>0.00007809</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                      <td class="text-center"><a class="text-red" href="#"><i class="fa fa-close"></i></a></td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td>0.00007809</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                     <td class="text-center"><a class="text-red" href="#"><i class="fa fa-close"></i></a></td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td>0.00007809</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                       <td class="text-center"><a class="text-red" href="#"><i class="fa fa-close"></i></a></td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td>0.00007809</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                       <td class="text-center"><a class="text-red" href="#"><i class="fa fa-close"></i></a></td>
+                    </tr>
+                     
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div id="dealt_order" class="tab-pane fade">
+              <div class="table-responsive">
+                <table width="100%" class="table table-striped table-bordered tr_hover" border="0" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th><span>Time</span> <span class="tbl_shoting"></span></th>
+                      <th><select class="form-control small_field">
+                          <option>Buy / Sell</option>
+                          <option>Buy / Sell</option>
+                          <option>Buy / Sell</option>
+                        </select></th>
+                      <th>Price BTC</th>
+                      <th>Amount KCS</th>
+                      <th>Dealt KCS</th>
+                      <th>Operation</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td>0.00007809</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td>0.00007809</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td>0.00007809</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td>0.00007809</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td>0.00007809</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td>0.00007809</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td>0.00007809</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td>0.00007809</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td>0.00007809</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                     
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="trade_history">
+          <div class="tbl_top_box">
+            <div class="tbl_title_box">
+              <h2>Trade History </h2>
+              <ul class="nav nav-tabs pull-right">
+                <li class="active"><a href="#market_trade" data-toggle="tab">MARKET TRADES</a></li>
+                <li><a href="#my_trade" data-toggle="tab">MY TRADES</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-content">
+            <div id="market_trade" class="tab-pane fade in active">
+              <div class="table-responsive">
+                <table width="100%" class="table table-striped table-bordered tr_hover" border="0" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Type</th>
+                      <th>Price (BTC)</th>
+                      <th>Amount (BTC)</th>
+                      <th>Total (BTC)</th>
+                      <th>Transaction Date</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td class="text-red">Sell</td>
+                      <td>0.00007809</td>
+                      <td>35.00000000</td>
+                      <td>0.020965850</td>
+                      <td>19/12/2017</td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td class="text-green">Buy</td>
+                      <td>0.00007809</td>
+                      <td>35.00000000</td>
+                      <td>0.020965850</td>
+                      <td>19/12/2017</td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td class="text-red">Sell</td>
+                      <td>0.00007809</td>
+                      <td>35.00000000</td>
+                      <td>0.020965850</td>
+                      <td>19/12/2017</td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td class="text-green">Buy</td>
+                      <td>0.00007809</td>
+                      <td>35.00000000</td>
+                      <td>0.020965850</td>
+                      <td>19/12/2017</td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td class="text-red">Sell</td>
+                      <td>0.00007809</td>
+                      <td>35.00000000</td>
+                      <td>0.020965850</td>
+                      <td>19/12/2017</td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td class="text-green">Buy</td>
+                      <td>0.00007809</td>
+                      <td>35.00000000</td>
+                      <td>0.020965850</td>
+                      <td>19/12/2017</td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td class="text-red">Sell</td>
+                      <td>0.00007809</td>
+                      <td>35.00000000</td>
+                      <td>0.020965850</td>
+                      <td>19/12/2017</td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td class="text-green">Buy</td>
+                      <td>0.00007809</td>
+                      <td>35.00000000</td>
+                      <td>0.020965850</td>
+                      <td>19/12/2017</td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td class="text-red">Sell</td>
+                      <td>0.00007809</td>
+                      <td>35.00000000</td>
+                      <td>0.020965850</td>
+                      <td>19/12/2017</td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td class="text-green">Buy</td>
+                      <td>0.00007809</td>
+                      <td>35.00000000</td>
+                      <td>0.020965850</td>
+                      <td>19/12/2017</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div id="my_trade" class="tab-pane fade  ">
+              <div class="table-responsive">
+                <table width="100%" class="table table-striped table-bordered tr_hover" border="0" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Type</th>
+                      <th>Price (BTC)</th>
+                      <th>Amount (BTC)</th>
+                      <th>Total (BTC)</th>
+                      <th>Transaction Date</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td class="text-red">Sell</td>
+                      <td>0.00007809</td>
+                      <td>35.00000000</td>
+                      <td>0.020965850</td>
+                      <td>19/12/2017</td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td class="text-green">Buy</td>
+                      <td>0.00007809</td>
+                      <td>35.00000000</td>
+                      <td>0.020965850</td>
+                      <td>19/12/2017</td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td class="text-red">Sell</td>
+                      <td>0.00007809</td>
+                      <td>35.00000000</td>
+                      <td>0.020965850</td>
+                      <td>19/12/2017</td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td class="text-green">Buy</td>
+                      <td>0.00007809</td>
+                      <td>35.00000000</td>
+                      <td>0.020965850</td>
+                      <td>19/12/2017</td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td class="text-red">Sell</td>
+                      <td>0.00007809</td>
+                      <td>35.00000000</td>
+                      <td>0.020965850</td>
+                      <td>19/12/2017</td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td class="text-green">Buy</td>
+                      <td>0.00007809</td>
+                      <td>35.00000000</td>
+                      <td>0.020965850</td>
+                      <td>19/12/2017</td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td class="text-red">Sell</td>
+                      <td>0.00007809</td>
+                      <td>35.00000000</td>
+                      <td>0.020965850</td>
+                      <td>19/12/2017</td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td class="text-green">Buy</td>
+                      <td>0.00007809</td>
+                      <td>35.00000000</td>
+                      <td>0.020965850</td>
+                      <td>19/12/2017</td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td class="text-red">Sell</td>
+                      <td>0.00007809</td>
+                      <td>35.00000000</td>
+                      <td>0.020965850</td>
+                      <td>19/12/2017</td>
+                    </tr>
+                    <tr>
+                      <td class="text-black">11:28:47</td>
+                      <td class="text-green">Buy</td>
+                      <td>0.00007809</td>
+                      <td>35.00000000</td>
+                      <td>0.020965850</td>
+                      <td>19/12/2017</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="market_depth">
+          <div class="tbl_top_box">
+            <div class="tbl_title_box">
+              <h2>MARKET DEPTH </h2>
+            </div>
+          </div>
+          <div class="graph_section"><img class="img-responsive" src="images/graph2_img.jpg" alt="" /></div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12 sidebar_style">
+        <div class="four_box_style">
+          <ul class="box_list_style">
+            <li>Last Price <strong>0.1050000</strong></li>
+            <li>24hr Change <strong class="text-red">-0.4%</strong></li>
+            <li>24hr High <strong>0.10585149</strong></li>
+            <li>24hr Low <strong>0.10159498</strong></li>
+          </ul>
+          <div class="btm_box">24hr Volume: <strong>3331.36826248</strong> BTC / <strong>31885.96616499</strong> ETH</div>
+        </div>
+        <div class="live_market">
+          <div class="tbl_top_box">
+            <div class="tbl_title_box">
+              <h2>LIVE Market</h2>
+              <ul class="nav nav-tabs pull-right">
+                <li class="active"><a data-toggle="tab" href="#btc">BTC</a></li>
+                <li><a data-toggle="tab" href="#eth">ETH</a></li>
+                <li><a data-toggle="tab" href="#brt">BRT</a></li>
+                <li><a data-toggle="tab" href="#usdat">USDaT</a></li>
+              </ul>
+            </div>
+            <form class="search_form_style">
+              <div class="search_field">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Filter (Ctrl+ F)">
+                  <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit"> <i class="glyphicon glyphicon-search"></i> </button>
+                  </div>
+                </div>
+              </div>
+              <div class="fav_btn"> <a href="#" class="btn"><span class="star_icon"></span> Favorites</a></div>
+            </form>
+          </div>
+          <div class="tab-content tbl_wd_short">
+            <div id="btc" class="tab-pane fade in active">
+              <div class="table-responsive">
+                <table width="100%" class="table table-striped table-bordered tr_hover" border="0" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th><img src="images/star.png" alt="" /></th>
+                      <th>Coin</th>
+                      <th><span>Price</span> <span class="tbl_shoting"></span></th>
+                      <th>Volume</th>
+                      <th>Change</th>
+                      <th>Name</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="shortby_section">
+                <ul>
+                  <li>Rows to Display
+                    <select class="form-control number_field">
+                      <option>20</option>
+                      <option>50</option>
+                      <option>100</option>
+                    </select>
+                  </li>
+                  <li>Right Column
+                    <select class="form-control name_field">
+                      <option>Name</option>
+                      <option>xyz</option>
+                      <option>abc</option>
+                    </select>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="eth" class="tab-pane fade">
+              <div class="table-responsive">
+                <table width="100%" class="table table-striped table-bordered tr_hover" border="0" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th><img src="images/star.png" alt="" /></th>
+                      <th>Coin</th>
+                      <th>Price</th>
+                      <th>Volume</th>
+                      <th>Change</th>
+                      <th>Name</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="shortby_section">
+                  <ul>
+                    <li>Rows to Display
+                      <select class="form-control number_field">
+                        <option>20</option>
+                        <option>50</option>
+                        <option>100</option>
+                      </select>
+                    </li>
+                    <li>Right Column
+                      <select class="form-control name_field">
+                        <option>Name</option>
+                        <option>xyz</option>
+                        <option>abc</option>
+                      </select>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div id="brt" class="tab-pane fade">
+              <div class="table-responsive">
+                <table width="100%" class="table table-striped table-bordered tr_hover" border="0" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th><img src="images/star.png" alt="" /></th>
+                      <th>Coin</th>
+                      <th>Price</th>
+                      <th>Volume</th>
+                      <th>Change</th>
+                      <th>Name</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="shortby_section">
+                  <ul>
+                    <li>Rows to Display
+                      <select class="form-control number_field">
+                        <option>20</option>
+                        <option>50</option>
+                        <option>100</option>
+                      </select>
+                    </li>
+                    <li>Right Column
+                      <select class="form-control name_field">
+                        <option>Name</option>
+                        <option>xyz</option>
+                        <option>abc</option>
+                      </select>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div id="usdat" class="tab-pane fade">
+              <div class="table-responsive">
+                <table width="100%" class="table table-striped table-bordered tr_hover" border="0" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th><img src="images/star.png" alt="" /></th>
+                      <th>Coin</th>
+                      <th>Price</th>
+                      <th>Volume</th>
+                      <th>Change</th>
+                      <th>Name</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-green">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                    <tr>
+                      <td><img src="images/star_empty.png" alt="" /></td>
+                      <td class="text-black">ARDR</td>
+                      <td>0.00007809</td>
+                      <td>33.162</td>
+                      <td class="text-red">+2.48</td>
+                      <td>Ardor</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="shortby_section">
+                  <ul>
+                    <li>Rows to Display
+                      <select class="form-control number_field">
+                        <option>20</option>
+                        <option>50</option>
+                        <option>100</option>
+                      </select>
+                    </li>
+                    <li>Right Column
+                      <select class="form-control name_field">
+                        <option>Name</option>
+                        <option>xyz</option>
+                        <option>abc</option>
+                      </select>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="merge_tbl_style">
+          <div class="tbl_top_box">
+            <div class="tbl_title_box">
+              <h2>Orders</h2>
+              <ul class="nav nav-tabs pull-right">
+                <li class="active"><a data-toggle="tab" href="#all_orders">All Orders</a></li>
+                <li><a data-toggle="tab" href="#Buy">Buy Order</a></li>
+                <li><a data-toggle="tab" href="#Sell">Sell Order</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-content">
+            <div id="all_orders" class="tab-pane fade in active">
+              <div class="table-responsive">
+                <table width="100%" class="table table-striped table-bordered" border="0" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th width="33.33%">Price</th>
+                      <th  width="33.33%">Amount (BNB)</th>
+                      <th  width="33.33%">Total (BTC)</th>
+                    </tr>
+                  </thead>
+                  <tbody class="progress_tbl">
+                    <tr class="red_10">
+                      <td class="text-red"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_20">
+                      <td class="text-red"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_50">
+                      <td class="text-red"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_80">
+                      <td class="text-red"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_70">
+                      <td class="text-red"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_90">
+                      <td class="text-red"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_100">
+                      <td class="text-red"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_40">
+                      <td class="text-red"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_30">
+                      <td class="text-red"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_80">
+                      <td class="text-red"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="mid_box_style">
+                <h3><span class="arrow_up"></span> <strong>0.00100960</strong></h3>
+                <ul>
+                  <li>$8.26</li>
+                  <li>Change <span class="text-green">+2.25%</span></li>
+                </ul>
+              </div>
+              <div class="table-responsive">
+                <table width="100%" class="table table-striped table-bordered" border="0" cellpadding="0" cellspacing="0">
+                  <tbody class="progress_tbl green_color_bg">
+                    <tr class="red_80">
+                      <td  width="33.33%" class="text-green"><span>0.00007809</span></td>
+                      <td  width="33.33%"><span>1598.69</span></td>
+                      <td  width="33.33%"><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_30">
+                      <td class="text-green"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_40">
+                      <td class="text-green"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_90">
+                      <td class="text-green"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_50">
+                      <td class="text-green"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_60">
+                      <td class="text-green"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_70">
+                      <td class="text-green"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_60">
+                      <td class="text-green"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_90">
+                      <td class="text-green"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_20">
+                      <td class="text-green"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div id="Buy" class="tab-pane fade">
+              <div class="mid_box_style">
+                <h3><span class="arrow_up"></span> <strong>0.00100960</strong></h3>
+                <ul>
+                  <li>$8.26</li>
+                  <li>Change <span class="text-green">+2.25%</span></li>
+                </ul>
+              </div>
+              <div class="table-responsive">
+                <table width="100%" class="table table-striped table-bordered" border="0" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th  width="33.33%">Price</th>
+                      <th  width="33.33%">Amount (BNB)</th>
+                      <th  width="33.33%">Total (BTC)</th>
+                    </tr>
+                  </thead>
+                  <tbody class="progress_tbl green_color_bg">
+                    <tr class="red_80">
+                      <td  width="33.33%" class="text-green"><span>0.00007809</span></td>
+                      <td  width="33.33%"><span>1598.69</span></td>
+                      <td  width="33.33%"><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_30">
+                      <td class="text-green"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_40">
+                      <td class="text-green"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_90">
+                      <td class="text-green"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_50">
+                      <td class="text-green"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_60">
+                      <td class="text-green"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_70">
+                      <td class="text-green"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_60">
+                      <td class="text-green"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_90">
+                      <td class="text-green"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_20">
+                      <td class="text-green"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div id="Sell" class="tab-pane fade">
+              <div class="table-responsive">
+                <table width="100%" class="table table-striped table-bordered" border="0" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th  width="33.33%">Price</th>
+                      <th  width="33.33%">Amount (BNB)</th>
+                      <th  width="33.33%">Total (BTC)</th>
+                    </tr>
+                  </thead>
+                  <tbody class="progress_tbl">
+                    <tr class="red_10">
+                      <td class="text-red"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_20">
+                      <td class="text-red"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_50">
+                      <td class="text-red"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_80">
+                      <td class="text-red"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_70">
+                      <td class="text-red"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_90">
+                      <td class="text-red"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_100">
+                      <td class="text-red"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_40">
+                      <td class="text-red"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_30">
+                      <td class="text-red"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                    <tr class="red_80">
+                      <td class="text-red"><span>0.00007809</span></td>
+                      <td><span>1598.69</span></td>
+                      <td><span>1.959891000</span>
+                        <div class="bg_color_progress"></div></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="news_section">
+          <div class="title_box">
+            <h2>News</h2>
+          </div>
+          <div class="scrollbars">
+            <ul>
+              <li>
+                <h3><a href="#">News to Our Legacy Account Holders</a></h3>
+                <small>Posted by <a href="#">busoni@poloniex</a> at 2017-12-27 22:24:47</small>
+                <p>LTC/USDT, ETC/USDT, TEL/USDT and OCN/USDT Trading Pairs will
+                  added on KuCoin at Jan. 28th 2018 18:30:00 (UCT+8). Thanks for...</p>
+              </li>
+              <li>
+                <h3><a href="#">STORJ/BTC market added</a></h3>
+                <small>Posted by <a href="#">busoni@poloniex</a> at 2017-12-27 22:24:47</small> </li>
+              <li>
+                <h3><a href="#">WARNING: There's an impostor Poloniex app in the 
+                  Google Play Store. Do not use this; it may be malicious. 
+                  There is no official Poloniex app.</a></h3>
+                <small>Posted by <a href="#">busoni@poloniex</a> at 2017-12-27 22:24:47</small> </li>
+              <li>
+                <h3><a href="#">News to Our Legacy Account Holders</a></h3>
+                <small>Posted by <a href="#">busoni@poloniex</a> at 2017-12-27 22:24:47</small>
+                <p>LTC/USDT, ETC/USDT, TEL/USDT and OCN/USDT Trading Pairs will
+                  added on KuCoin at Jan. 28th 2018 18:30:00 (UCT+8). Thanks for...</p>
+              </li>
+              <li>
+                <h3><a href="#">News to Our Legacy Account Holders</a></h3>
+                <small>Posted by <a href="#">busoni@poloniex</a> at 2017-12-27 22:24:47</small>
+                <p>LTC/USDT, ETC/USDT, TEL/USDT and OCN/USDT Trading Pairs will
+                  added on KuCoin at Jan. 28th 2018 18:30:00 (UCT+8). Thanks for...</p>
+              </li>
+              <li>
+                <h3><a href="#">News to Our Legacy Account Holders</a></h3>
+                <small>Posted by <a href="#">busoni@poloniex</a> at 2017-12-27 22:24:47</small>
+                <p>LTC/USDT, ETC/USDT, TEL/USDT and OCN/USDT Trading Pairs will
+                  added on KuCoin at Jan. 28th 2018 18:30:00 (UCT+8). Thanks for...</p>
+              </li>
+              <li>
+                <h3><a href="#">News to Our Legacy Account Holders</a></h3>
+                <small>Posted by <a href="#">busoni@poloniex</a> at 2017-12-27 22:24:47</small>
+                <p>LTC/USDT, ETC/USDT, TEL/USDT and OCN/USDT Trading Pairs will
+                  added on KuCoin at Jan. 28th 2018 18:30:00 (UCT+8). Thanks for...</p>
+              </li>
+              <li>
+                <h3><a href="#">News to Our Legacy Account Holders</a></h3>
+                <small>Posted by <a href="#">busoni@poloniex</a> at 2017-12-27 22:24:47</small>
+                <p>LTC/USDT, ETC/USDT, TEL/USDT and OCN/USDT Trading Pairs will
+                  added on KuCoin at Jan. 28th 2018 18:30:00 (UCT+8). Thanks for...</p>
+              </li>
+              <li>
+                <h3><a href="#">News to Our Legacy Account Holders</a></h3>
+                <small>Posted by <a href="#">busoni@poloniex</a> at 2017-12-27 22:24:47</small>
+                <p>LTC/USDT, ETC/USDT, TEL/USDT and OCN/USDT Trading Pairs will
+                  added on KuCoin at Jan. 28th 2018 18:30:00 (UCT+8). Thanks for...</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="container">
+    <div class="footer_top_box">
+      <div class="row">
+        <div class="col-md-3 col-sm-3 col-xs-12 ">
+          <ul class="footer_link">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Balances</a></li>
+            <li><a href="#">Order</a></li>
+            <li><a href="#">Privacy & Terms of Use</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12 text-center mid_box"> <a href="#"><img src="images/footer_logo.png" alt="" /> </a>
+          <ul class="social_icons list-inline">
+            <li><a href="#"><span class="facebook_icon"></span> <strong>Facebook</strong></a></li>
+            <li><a href="#"><span class="twitter_icon"></span> <strong>Twitter</strong></a></li>
+            <li><a href="#"><span class="instagram_icon"></span> <strong>Instagram</strong></a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-12 text-right footer_last_child"> <strong>Location</strong>
+          <address>
+          FDR Drive Manhattan, <br>
+          New York, NY 10009, USA
+          </address>
+          <ul>
+            <li><a href="mailto:info@bartertrade.com">info@bartertrade.com</a> </li>
+            <li><a href="tel:202-555-0191">202-555-0191</a>, <a href="tel:202-555-0895">202-555-0895</a></li>
+            <li>FAX - (865) 934-1234</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer_copy_right">
+    <div class="row">
+      <div class="col-md-8 col-sm-8 col-xs-8"> © Copyright 2018 Barter Trade. All rights reserved. </div>
+      <div class="col-md-4 col-sm-4 col-xs-4 text-right"> Designed by <a href="https://www.hitaishin.com/" target="_blank">Hitaishin</a> </div>
+    </div>
+  </div>
+</footer>
+<script src="js/jquery.min.js"></script> 
+<script src="js/bootstrap.js"></script> 
+<script type="text/javascript" src="js/jquery.classyscroll.js"></script>
+<style>
+.scrollbars{width:100%;height:280px;}
+</style>
+<script>
+            $(document).ready(function() {
+                $('.scrollbars').ClassyScroll();
+            });
+	 </script> 
+<script>
+(function ($) {
+  $('.spinner .btn:first-of-type').on('click', function() {
+    $('.spinner input').val( parseInt($('.spinner input').val(), 10) + 1);
+  });
+  $('.spinner .btn:last-of-type').on('click', function() {
+    $('.spinner input').val( parseInt($('.spinner input').val(), 10) - 1);
+  });
+})(jQuery);
+</script>
+</body>
+</html>
